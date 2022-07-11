@@ -23,9 +23,12 @@ func main() {
 	weight, _ := strconv.ParseFloat(weightInput, 64)
 	height, _ := strconv.ParseFloat(heightInput, 64)
 
-	// bmi := weight / (height * height)
-	
-	fmt.Print(height, weight)
+	// userInput = strings.Replace(userInput, "\n", "", -1)
+	// userRolled, _ := strconv.Atoi(userInput)
 
-	// fmt.Printf("the BMI of Weight %v kg and height %v m is %v", weight,height, bmi)
+
+	bmi := weight / (height * height)
+	
+
+	fmt.Printf("the BMI of Weight %v kg and height %v m is %v", weight,height, bmi)
 }
