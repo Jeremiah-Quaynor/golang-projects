@@ -1,39 +1,19 @@
-// package variabledeepdive
 package main
 
-import "fmt"
+
+const userName = "Jeremiah" // const can't be reassigned
+
+const age = 34/3 //allowed
+
+// const random = rand.Int() // not allowed
+
+const (
+	inputAttack = iota +2
+	inputSpecialAttack 
+	inputHeal 
+)
 
 
 func main () {
-	// new & make 
-
-	number := new(int)
-	fmt.Print(number)
-	fmt.Print(*number)
-
-	anotherNumber := 0
-	numberAddress := &anotherNumber
-
-	// hobbies := []string{"Sports", "Reading"}
-
-	hobbies := make([]string, 2, 10)
-	moreHobbies := new([]string)
-	// evenMoreHobbies := []string{} //make([]string)
-
-	fmt.Println(*moreHobbies)
-
-	*moreHobbies = append(*moreHobbies, "Sports")
-
-	// aMap := make(map[string]int, 5) // making a map 
-
-	hobbies[0] = "Sports"
-	hobbies[1] = "Cooking 2"
-
-	fmt.Println(hobbies)
-
-	hobbies = append(hobbies, "Cooking", "Dancing")
-
-
-	fmt.Println(hobbies)
 
 }
