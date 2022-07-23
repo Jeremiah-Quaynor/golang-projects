@@ -26,6 +26,21 @@ type userInputData struct {
 
 }
 
+//embedding structs
+type user struct {
+	firstName string
+	lastName string 
+	*userInputData
+}
+
+func newUser (first string, last string) *user{
+	return &user{
+		firstName: first,
+		lastName: last,
+		userInputData: &userInputData{},
+	}
+}
+
 func newUserInputData () *userInputData {
 	return &userInputData{}
 }
@@ -61,6 +76,11 @@ func (usr *userInputData ) Store(fileName string) {
 
 func main () {
 	data := newUserInputData()
+	jay := newUser("Jeremiah", "Quaynor")
+
+	jay.PromptForInput()
+	jay.Store("jay.txt")
+
 	// data.PromptForInput()
 	// data.Store("user1.txt")
 
