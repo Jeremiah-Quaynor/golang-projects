@@ -6,8 +6,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/jeremiah-quaynor/golang-projects/Book-Manager/pkg/routes"
-	"github.com/jeremiah-quaynor/golang-projects/pkg/rountes"
-	_ "github.com/jinzhu/gorm/diablects/myqsl"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 func main ( ) {
